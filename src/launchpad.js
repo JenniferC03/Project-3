@@ -71,6 +71,20 @@ function noteOn(note) {
     colorM(note+1,124);
     colorM(note+2,124);
 
+    if ( note == 72){
+        document.getElementById('hello_tag').textContent = "GoodBye!"
+        colorM(note,104);
+        colorM(note+1,104);
+        colorM(note+2,104);
+    
+      }
+    
+      if ( note == 83){
+        document.getElementById('hello_tag').textContent = "64!"
+        colorM(note,124);
+        colorM(note+1,124);
+        colorM(note+2,124);
+    
   }
 }
 
@@ -78,7 +92,7 @@ function noteOff(note){
     console.log(`note:${note} // off`);
     
 
-    if ( note == 99){
+    if ( note =+ 99){
         document.getElementById('hello_tag').textContent = "Hello World!"
         colorM(note,0);
         colorM(note+1,0);
@@ -90,6 +104,19 @@ function noteOff(note){
         colorM(note,0);
         colorM(note+1,0);
         colorM(note+2,0);
+
+        ( note == 72){
+            document.getElementById('hello_tag').textContent = "GoodBye!"
+            colorM(note,104);
+            colorM(note+1,104);
+            colorM(note+2,104);
+        
+          }
+        
+          if ( note == 83){
+            document.getElementById('hello_tag').textContent = "64!"
+            colorM(note,124);
+            colorM(note+1,124);
       }
 
 }
@@ -100,4 +127,3 @@ function colorM(key,clr){
   // The color key can be found on page 11 @ https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiEjtrOurb7AhXMlokEHcjqB_0QFnoECA8QAQ&url=https%3A%2F%2Fwww.djshop.gr%2FAttachment%2FDownloadFile%3FdownloadId%3D10737&usg=AOvVaw02Njpg1AY5jOV7Z6gjcw5W
     device && device.send([0x90,key,clr]); 
 }
-
